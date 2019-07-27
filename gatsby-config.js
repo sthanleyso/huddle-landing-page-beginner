@@ -5,17 +5,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: path.resolve(__dirname, `src`, `images`),
         name: `images`,
-        path: path.join(__dirname, `src`, `images`),
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: false,
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
   ],
 };
