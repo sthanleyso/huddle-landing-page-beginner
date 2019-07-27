@@ -4,9 +4,14 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 import {
-  HeroSection
+  HeroSection,
+  CardSection,
+  ContactSection,
+  Card,
+  Box,
 } from "../styles"
 
+import logo from "../images/logo-white.svg"
 import mockups from "../images/illustration-mockups.svg";
 import growTogether from "../images/illustration-grow-together.svg";
 import flowingConversation from "../images/illustration-flowing-conversation.svg";
@@ -22,46 +27,55 @@ const Home = () => {
           so does your audience. Create connections with your users as you
           engage in genuine discussion.
         </p>
-        <Link to="#!">
+        <Link to="#!" className="btn">
           Get Started For Free
         </Link>
         <img src={mockups} alt="Illustration Mockups"/>
       </HeroSection>
-      <section>
-        <article class="box">
+      <CardSection>
+        <Card>
+          <img src={growTogether} alt="Grow together illustration"/>
+          <div>
           <h2 class="box__title">Grow Together</h2>
           <p class="box__text">
             Generate meaningful discussions with your audience and build a
             strong, loyal community. Think of the insightful conversations you
             miss out on with a feedback form.
           </p>
-        </article>
-        <article class="box">
+          </div>
+        </Card>
+        <Card>
+          <img src={flowingConversation} alt="Flowing conversation illlustration"/>
+          <div>
           <h2 class="box__title">Flowing Conversations</h2>
           <p class="box__text">
             You wouldn't paginate a conversation in real life, so why do it
             online? Our threads have just-in-time loading for a more natural
             flow.
           </p>
-        </article>
-        <article class="box">
+          </div>
+        </Card>
+        <Card>
+          <img src={yourUsers} alt="Your users illustration"/>
+          <div>
           <h2 class="box__title">Your Users</h2>
           <p class="box__text">
             It takes no time at all to integrate Huddle with your app's
             authentication solution. This means, once signed in to your app,
             your users can start chatting immediately.
           </p>
-        </article>
-        <article>
+          </div>
+        </Card>
+        <Box>
           <h2>Ready To Build Your Community?</h2>
-
-          <a class="btn" href="#!">
+          <Link to="#!" className="btn">
             Get Started For Free
-          </a>
-        </article>
-      </section>
-      <section class="contacts__section">
+          </Link>
+        </Box>
+      </CardSection>
+      <ContactSection>
         <article class="contacts__box">
+          <img src={logo} alt="Huddle brand"/>
           <p>
             Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz
             malandris se pirulitá. Tá deprimidis, eu conheço uma cachacis que
@@ -80,7 +94,7 @@ const Home = () => {
         </nav>
 
         <p>&copy; Copyright 2018 Huddle. All rights reserved.</p>
-      </section>
+      </ContactSection>
     </Layout>
   )
 }
