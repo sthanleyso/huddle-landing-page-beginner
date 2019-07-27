@@ -30,7 +30,7 @@ export const HeaderContent = styled.div`
     font-size: 0.7rem;
     font-weight: 600;
     color: hsl(192, 100%, 9%);
-    box-shadow: 0 0.05rem 0.08rem hsl(208, 11%, 55%);
+    box-shadow: 0 8px 12px 0 hsla(180,5%,92%,.16),0 2px 8px 0 hsla(0,0%,0%,.08);
     transition: 0.2s;
 
     :hover {
@@ -110,8 +110,7 @@ export const Card = styled.article`
   width: 90%;
   margin-bottom: 30px;
   padding: 24px;
-  box-shadow: 0 1px 5px hsl(193, 100%, 96%);
-  border: 2px solid hsl(193, 100%, 96%);
+  box-shadow: 0 8px 12px 0 hsla(180,5%,92%,.16),0 2px 8px 0 hsla(0,0%,0%,.08);
   border-radius: 12px;
   line-height: 1.4;
 
@@ -134,7 +133,7 @@ export const Box = styled(Card)`
   padding: 26px 0;
   background-color: #ffffff;
   text-align: center;
-  box-shadow: none;
+  box-shadow: 0 -8px 12px 0 hsla(180,5%,92%,.16),0 -2px 8px 0 hsla(0,0%,0%,.08);
   -moz-transform: translate(0px, 60px);
   -webkit-transform: translate(0px, 60px);
   -o-transform: translate(0px, 60px);
