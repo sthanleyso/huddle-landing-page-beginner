@@ -1,4 +1,5 @@
 import styled from "styled-components"
+
 import bgMobile from "../images/bg-hero-mobile.svg"
 
 export const MainHeader = styled.header`
@@ -52,7 +53,9 @@ export const HeroSection = styled.section`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 680px;
+  flex-basis: 0;
+  width: 100%;
+  padding: 32px 24px;
   background-image: url(${bgMobile});
   background-color: hsl(193, 100%, 96%);
   background-position: center;
@@ -62,23 +65,25 @@ export const HeroSection = styled.section`
   line-height: 1.4;
 
   h1 {
-    width: 70%;
-    margin-top: 100px;
+    padding: 0 24px;
+    margin-top: 124px;
+    margin-bottom: 24px;
     font-size: 1.5rem;
   }
 
   p {
-    width: 83%;
+    padding: 0 8px;
+    margin-bottom: 32px;
     font-size: 1rem;
   }
 
   a {
-    width: 60%;
-    padding: 10px 0;
-    margin: 0 auto;
+    width: 232px;
+    padding: 11px 0;
+    margin-bottom: 48px;
     text-align: center;
     border-radius: 20px;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 700;
     background-color: hsl(322, 100%, 66%);
     color: hsl(193, 100%, 96%);
@@ -91,7 +96,17 @@ export const HeroSection = styled.section`
   }
 
   img {
-    max-width: 300px;
+    max-width: 480px;
+  }
+
+  @media(min-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
   }
 `;
 
@@ -106,13 +121,19 @@ export const Card = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 500px;
+  align-items: center;
+  flex-basis: 0;
   width: 90%;
   margin-bottom: 30px;
-  padding: 24px;
+  padding: 42px 32px;
   box-shadow: 0 8px 12px 0 hsla(180,5%,92%,.16),0 2px 8px 0 hsla(0,0%,0%,.08);
   border-radius: 12px;
   line-height: 1.4;
+
+  img {
+    max-width: 480px;
+    margin-bottom: 42px;
+  }
 
   h2 {
     font-size: 1.2rem;
@@ -124,13 +145,22 @@ export const Card = styled.article`
     font-size: 0.9rem;
     color: hsl(208, 11%, 55%);
   }
+
+  @media(min-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
 `;
 
 export const Box = styled(Card)`
   width: 95%;
-  height: 160px;
   margin-bottom: 0;
-  padding: 26px 0;
+  padding: 42px 0;
   background-color: #ffffff;
   text-align: center;
   box-shadow: 0 -8px 12px 0 hsla(180,5%,92%,.16),0 -2px 8px 0 hsla(0,0%,0%,.08);
@@ -140,10 +170,13 @@ export const Box = styled(Card)`
   -ms-transform: translate(0px, 60px);
   transform: translate(0px, 60px);
 
+  h2 {
+    margin-bottom: 24px;
+  }
+
   a {
-    width: 60%;
+    width: 228px;
     padding: 12px 0;
-    margin: 0 auto;
     border-radius: 20px;
     font-size: 0.7rem;
     font-weight: 700;
@@ -155,6 +188,10 @@ export const Box = styled(Card)`
       opacity: 0.8;
       transition: 0.2s;
     }
+  }
+
+  @media(min-width: 480px) {
+    width: 456px;
   }
 `;
 
