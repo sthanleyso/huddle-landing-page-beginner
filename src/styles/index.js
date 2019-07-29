@@ -14,13 +14,12 @@ export const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   max-width: 1440px;
   height: 72px;
   padding: 0 20px;
 
   img {
-    width: 110px;
+    width: 100px;
   }
 
   a {
@@ -45,6 +44,7 @@ export const MainContent = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   text-align: center;
 `;
 
@@ -65,7 +65,6 @@ export const HeroSection = styled.section`
   line-height: 1.4;
 
   h1 {
-    padding: 0 24px;
     margin-top: 124px;
     margin-bottom: 24px;
     font-size: 1.5rem;
@@ -96,7 +95,7 @@ export const HeroSection = styled.section`
   }
 
   img {
-    max-width: 480px;
+    max-width: 360px;
   }
 
   @media(min-width: 480px) {
@@ -107,6 +106,10 @@ export const HeroSection = styled.section`
     p {
       font-size: 1.2rem;
     }
+
+    img {
+      max-width: 480px;
+    }
   }
 `;
 
@@ -114,6 +117,8 @@ export const CardSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  flex-basis: 0;
   margin-top: 50px;
 `;
 
@@ -162,7 +167,6 @@ export const Box = styled(Card)`
   margin-bottom: 0;
   padding: 42px 0;
   background-color: #ffffff;
-  text-align: center;
   box-shadow: 0 -8px 12px 0 hsla(180,5%,92%,.16),0 -2px 8px 0 hsla(0,0%,0%,.08);
   -moz-transform: translate(0px, 60px);
   -webkit-transform: translate(0px, 60px);
@@ -171,14 +175,15 @@ export const Box = styled(Card)`
   transform: translate(0px, 60px);
 
   h2 {
+    font-size: 1rem;
     margin-bottom: 24px;
   }
 
   a {
-    width: 228px;
+    width: 210px;
     padding: 12px 0;
     border-radius: 20px;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 700;
     background-color: hsl(322, 100%, 66%);
     color: hsl(193, 100%, 96%);
@@ -191,20 +196,43 @@ export const Box = styled(Card)`
   }
 
   @media(min-width: 480px) {
-    width: 456px;
+    max-width: 456px;
+
+    h2 {
+      font-size: 1.2rem;
+    }
   }
 `;
 
 export const ContactSection = styled(CardSection)`
+  align-items: flex-start;
   background-color: hsl(192, 100%, 9%);
   color: hsl(193, 100%, 96%);
-  text-align: left;
   margin-top: 0;
-  padding: 0 10px;
-  padding-top: 100px;
-  
+  padding: 120px 10px 50px 10px;
+  text-align: left;
 
   img {
-    width: 110px;
+    width: 156px;
+    margin-bottom: 20px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-basis: 0;
+    margin-bottom: 10px;
+
+    img {
+      width: 20px;
+      margin-right: 16px;
+    }
+
+    p {
+      flex: 1;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
   }
 `;

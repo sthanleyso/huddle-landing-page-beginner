@@ -20,7 +20,15 @@ export const Elements = createGlobalStyle`
     text-decoration: none;
   }
 
+  nav,
+  ul,
+  li {
+    list-style: none;
+  }
+
+  html,
   body {
+    height: 100%;
     font-family: var(--open-sans);
     font-size: 18px;
     -webkit-font-smoothing: antialiased !important;

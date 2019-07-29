@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 
@@ -12,10 +11,13 @@ import {
 } from "../styles"
 
 import logo from "../images/logo-white.svg"
-import mockups from "../images/illustration-mockups.svg";
-import growTogether from "../images/illustration-grow-together.svg";
-import flowingConversation from "../images/illustration-flowing-conversation.svg";
-import yourUsers from "../images/illustration-your-users.svg";
+import mockups from "../images/illustration-mockups.svg"
+import growTogether from "../images/illustration-grow-together.svg"
+import flowingConversation from "../images/illustration-flowing-conversation.svg"
+import yourUsers from "../images/illustration-your-users.svg"
+import phone from "../images/icon-phone.svg"
+import email from "../images/icon-email.svg"
+import location from "../images/icon-location.svg"
 
 const Home = () => {
   return (
@@ -27,9 +29,9 @@ const Home = () => {
           so does your audience. Create connections with your users as you
           engage in genuine discussion.
         </p>
-        <Link to="#!" className="btn">
+        <a href="#!">
           Get Started For Free
-        </Link>
+        </a>
         <img src={mockups} alt="Illustration Mockups"/>
       </HeroSection>
       <CardSection>
@@ -62,21 +64,30 @@ const Home = () => {
         </Card>
         <Box>
           <h2>Ready To Build Your Community?</h2>
-          <Link to="#!" className="btn">
+          <a href="#!">
             Get Started For Free
-          </Link>
+          </a>
         </Box>
       </CardSection>
       <ContactSection>
         <article class="contacts__box">
           <img src={logo} alt="Huddle brand"/>
-          <p>
-            Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz
-            malandris se pirulitá. Tá deprimidis, eu conheço uma cachacis que
-            pode alegrar sua vidis.
-          </p>
-          <p>+1-543-123-4567</p>
-          <p>example@huddle.com</p>
+          <div>
+            <img src={location} alt="Location icon"/>
+            <p>
+              Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz
+              malandris se pirulitá. Tá deprimidis, eu conheço uma cachacis que
+              pode alegrar sua vidis.
+            </p>
+          </div>
+          <div>
+            <img src={phone} alt="Phone icon"/>
+            <p>+1-543-123-4567</p>
+          </div>
+          <div>
+            <img src={email} alt="Email icon"/>
+            <p>example@huddle.com</p>
+          </div>
         </article>
         <nav>
           <li>About Us</li>

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import { MainHeader, HeaderContent } from "../styles"
 
@@ -10,7 +9,7 @@ const Header = () => {
     <MainHeader>
       <HeaderContent>
         <img src={logo} alt="Brand"/>
-        <Link to="#!">Try It Free</Link>
+        <a href="#!">Try It Free</a>
       </HeaderContent>
     </MainHeader>
   )
