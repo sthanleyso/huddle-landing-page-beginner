@@ -1,4 +1,10 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faFacebookF,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
 
 import Layout from "../components/layout"
 
@@ -8,6 +14,9 @@ import {
   ContactSection,
   Card,
   Box,
+  ContactBox,
+  Menu,
+  SocialMedia,
 } from "../styles"
 
 import logo from "../images/logo-white.svg"
@@ -29,14 +38,12 @@ const Home = () => {
           so does your audience. Create connections with your users as you
           engage in genuine discussion.
         </p>
-        <a href="#!">
-          Get Started For Free
-        </a>
-        <img src={mockups} alt="Illustration Mockups"/>
+        <a href="#!">Get Started For Free</a>
+        <img src={mockups} alt="Illustration Mockups" />
       </HeroSection>
       <CardSection>
         <Card>
-          <img src={growTogether} alt="Grow together illustration"/>
+          <img src={growTogether} alt="Grow together illustration" />
           <h2>Grow Together</h2>
           <p>
             Generate meaningful discussions with your audience and build a
@@ -45,7 +52,10 @@ const Home = () => {
           </p>
         </Card>
         <Card>
-          <img src={flowingConversation} alt="Flowing conversation illlustration"/>
+          <img
+            src={flowingConversation}
+            alt="Flowing conversation illlustration"
+          />
           <h2>Flowing Conversations</h2>
           <p>
             You wouldn't paginate a conversation in real life, so why do it
@@ -54,7 +64,7 @@ const Home = () => {
           </p>
         </Card>
         <Card>
-          <img src={yourUsers} alt="Your users illustration"/>
+          <img src={yourUsers} alt="Your users illustration" />
           <h2>Your Users</h2>
           <p>
             It takes no time at all to integrate Huddle with your app's
@@ -64,16 +74,14 @@ const Home = () => {
         </Card>
         <Box>
           <h2>Ready To Build Your Community?</h2>
-          <a href="#!">
-            Get Started For Free
-          </a>
+          <a href="#!">Get Started For Free</a>
         </Box>
       </CardSection>
       <ContactSection>
-        <article class="contacts__box">
-          <img src={logo} alt="Huddle brand"/>
+        <ContactBox>
+          <img src={logo} alt="Huddle brand" />
           <div>
-            <img src={location} alt="Location icon"/>
+            <img src={location} alt="Location icon" />
             <p>
               Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz
               malandris se pirulitá. Tá deprimidis, eu conheço uma cachacis que
@@ -81,23 +89,39 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <img src={phone} alt="Phone icon"/>
+            <img src={phone} alt="Phone icon" />
             <p>+1-543-123-4567</p>
           </div>
           <div>
-            <img src={email} alt="Email icon"/>
+            <img src={email} alt="Email icon" />
             <p>example@huddle.com</p>
           </div>
-        </article>
-        <nav>
-          <li>About Us</li>
-          <li>What We Do</li>
-          <li>FAQ</li>
-          <li>Career</li>
-          <li>Blog</li>
-          <li>Contact Us</li>
-        </nav>
-
+        </ContactBox>
+        <Menu>
+          <li><a href="#!">About Us</a></li>
+          <li><a href="#!">What We Do</a></li>
+          <li><a href="#!">FAQ</a></li>
+          <li><a href="#!">Career</a></li>
+          <li><a href="#!">Blog</a></li>
+          <li><a href="#!">Contact Us</a></li>
+        </Menu>
+        <SocialMedia>
+          <li>
+            <a href="#!">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+          </li>
+          <li>
+            <a href="#!">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          </li>
+          <li>
+            <a href="#!">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+          </li>
+        </SocialMedia>
         <p>&copy; Copyright 2018 Huddle. All rights reserved.</p>
       </ContactSection>
     </Layout>
