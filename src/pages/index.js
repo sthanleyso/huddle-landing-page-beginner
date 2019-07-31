@@ -13,6 +13,7 @@ import {
   CardSection,
   ContactSection,
   Card,
+  CardReverse,
   Box,
   ContactBox,
   Menu,
@@ -32,7 +33,11 @@ const Home = () => {
   return (
     <Layout>
       <HeroSection>
-        <h1>Build The Community Your Fans Will Love</h1>
+        <h1>
+          Build The Community
+          <br />
+          Your Fans Will Love
+        </h1>
         <p>
           Huddle re-imagines the way we build communities. You have a voice, but
           so does your audience. Create connections with your users as you
@@ -51,7 +56,7 @@ const Home = () => {
             miss out on with a feedback form.
           </p>
         </Card>
-        <Card>
+        <CardReverse>
           <img
             src={flowingConversation}
             alt="Flowing conversation illlustration"
@@ -62,7 +67,7 @@ const Home = () => {
             online? Our threads have just-in-time loading for a more natural
             flow.
           </p>
-        </Card>
+        </CardReverse>
         <Card>
           <img src={yourUsers} alt="Your users illustration" />
           <h2>Your Users</h2>

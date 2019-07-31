@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import bgMobile from "../images/bg-hero-mobile.svg"
+import bgDesktop from "../images/bg-hero-desktop.svg"
 
 export const MainHeader = styled.header`
   width: 100%;
@@ -29,6 +30,7 @@ export const HeaderContent = styled.div`
     border-radius: 12px;
     font-size: 0.7rem;
     font-weight: 600;
+    background-color: #ffffff;
     color: hsl(192, 100%, 9%);
     box-shadow: 0 8px 12px 0 hsla(180, 5%, 92%, 0.16),
       0 2px 8px 0 hsla(0, 0%, 0%, 0.08);
@@ -37,6 +39,22 @@ export const HeaderContent = styled.div`
     :hover {
       opacity: 0.8;
       transition: 0.2s;
+    }
+  }
+
+  @media (min-width: 700px) {
+    height: 82px;
+    padding: 0 56px;
+
+    img {
+      width: 124px;
+    }
+
+    a {
+      width: 142px;
+      padding: 12px 0;
+      font-size: 0.65rem;
+      border-radius: 18px;
     }
   }
 `
@@ -56,7 +74,7 @@ export const HeroSection = styled.section`
   align-items: center;
   flex-basis: 0;
   width: 100%;
-  padding: 32px 24px;
+  padding: 156px 24px 32px 24px;
   background-image: url(${bgMobile});
   background-color: hsl(193, 100%, 96%);
   background-position: center;
@@ -66,7 +84,6 @@ export const HeroSection = styled.section`
   line-height: 1.4;
 
   h1 {
-    margin-top: 124px;
     margin-bottom: 24px;
     font-size: 1.5rem;
   }
@@ -74,13 +91,13 @@ export const HeroSection = styled.section`
   p {
     padding: 0 8px;
     margin-bottom: 32px;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   a {
     width: 232px;
-    padding: 11px 0;
     margin-bottom: 48px;
+    padding: 11px 0;
     text-align: center;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -100,17 +117,65 @@ export const HeroSection = styled.section`
   }
 
   @media (min-width: 480px) {
-    h1 {
-      font-size: 2rem;
-      padding: 0 24px;
+    img {
+      max-width: 480px;
+    }
+  }
+
+  @media (min-width: 700px) {
+    display: grid;
+    grid-template-areas:
+      "title . pic pic"
+      "desc . pic pic"
+      "link . pic pic";
+    grid-row-gap: 12px;
+    grid-column-gap: 20px;
+    background-image: url(${bgDesktop});
+    text-align: left;
+    padding: 120px 56px 42px 56px;
+
+    h1,
+    p,
+    a {
+      margin-bottom: 0;
     }
 
-    p {
+    h1 {
+      grid-area: title;
       font-size: 1.2rem;
     }
 
+    p {
+      grid-area: desc;
+      padding: 0;
+      font-size: 0.75rem;
+    }
+
+    a {
+      grid-area: link;
+      width: 212px;
+      font-size: 0.7rem;
+      padding: 9px 0;
+    }
+
     img {
-      max-width: 480px;
+      grid-area: pic;
+      max-width: 600px;
+    }
+  }
+
+  @media(min-width: 980px) {
+    h1 {
+      align-self: end;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    a {
+      align-self: start;
     }
   }
 `
@@ -139,7 +204,7 @@ export const Card = styled.article`
   line-height: 1.4;
 
   img {
-    max-width: 480px;
+    max-width: 360px;
     margin-bottom: 42px;
   }
 
@@ -150,7 +215,7 @@ export const Card = styled.article`
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.821rem;
     color: hsl(208, 11%, 55%);
   }
 
@@ -160,18 +225,73 @@ export const Card = styled.article`
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 0.821rem;
+    }
+  }
+
+  @media(min-width: 700px) {
+    display: grid;
+    grid-template-areas:
+      "title . pic"
+      "desc . pic";
+    grid-column-gap: 40px;
+    grid-row-gap: 16px;
+    text-align: left;
+    padding: 32px 32px 32px 56px;
+
+    h2 {
+      grid-area: title;
+      align-self: end;
+      margin-bottom: 0;
+      font-size: 1.2rem;
+    }
+
+    p {
+      grid-area: desc;
+      align-self: start;
+    }
+
+    img {
+      grid-area: pic;
+      margin-bottom: 0;
+    }
+  }
+
+  @media(min-width: 980px) {
+    grid-column-gap: 80px;
+    padding: 42px 32px 42px 56px;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
     }
   }
 `
 
-export const Box = styled(Card)`
+export const CardReverse = styled(Card)`
+  @media(min-width: 700px) {
+    grid-template-areas:
+      "pic . title"
+      "pic . desc";   
+  }
+`
+
+export const Box = styled.article`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 0;
   width: 95%;
   margin-bottom: 0;
   padding: 42px 0;
   background-color: #ffffff;
   box-shadow: 0 -8px 12px 0 hsla(180, 5%, 92%, 0.16),
     0 -2px 8px 0 hsla(0, 0%, 0%, 0.08);
+  border-radius: 12px;
   -moz-transform: translate(0px, 60px);
   -webkit-transform: translate(0px, 60px);
   -o-transform: translate(0px, 60px);
