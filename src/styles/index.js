@@ -112,24 +112,20 @@ export const HeroSection = styled.section`
     }
   }
 
-  img {
-    max-width: 360px;
-  }
-
   @media (min-width: 480px) {
     img {
-      max-width: 480px;
+      max-width: 80%;
     }
   }
 
   @media (min-width: 700px) {
     display: grid;
     grid-template-areas:
-      "title . pic pic"
-      "desc . pic pic"
-      "link . pic pic";
-    grid-row-gap: 12px;
-    grid-column-gap: 20px;
+      "title pic"
+      "desc pic"
+      "link pic";
+    grid-auto-columns: minmax(200px, 1fr);
+    grid-column-gap: 40px;
     background-image: url(${bgDesktop});
     text-align: left;
     padding: 120px 56px 42px 56px;
@@ -143,6 +139,7 @@ export const HeroSection = styled.section`
     h1 {
       grid-area: title;
       font-size: 1.2rem;
+      width: 240px;
     }
 
     p {
@@ -160,7 +157,6 @@ export const HeroSection = styled.section`
 
     img {
       grid-area: pic;
-      max-width: 600px;
     }
   }
 
@@ -168,6 +164,7 @@ export const HeroSection = styled.section`
     h1 {
       align-self: end;
       font-size: 2rem;
+      width: 360px;
     }
 
     p {
@@ -204,7 +201,7 @@ export const Card = styled.article`
   line-height: 1.4;
 
   img {
-    max-width: 360px;
+    /* max-width: 360px; */
     margin-bottom: 42px;
   }
 
@@ -229,11 +226,17 @@ export const Card = styled.article`
     }
   }
 
+  @media (min-width: 480px) {
+    img {
+      max-width: 80%;
+    }
+  }
+
   @media(min-width: 700px) {
     display: grid;
     grid-template-areas:
-      "title . pic"
-      "desc . pic";
+      "title pic"
+      "desc pic";
     grid-column-gap: 40px;
     grid-row-gap: 16px;
     text-align: left;
@@ -274,8 +277,8 @@ export const Card = styled.article`
 export const CardReverse = styled(Card)`
   @media(min-width: 700px) {
     grid-template-areas:
-      "pic . title"
-      "pic . desc";   
+      "pic title"
+      "pic desc";
   }
 `
 

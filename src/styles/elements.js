@@ -30,7 +30,6 @@ export const Elements = createGlobalStyle`
   body {
     height: 100%;
     font-family: var(--open-sans);
-    font-size: 18px;
     -webkit-font-smoothing: antialiased !important;
   }
 
@@ -41,6 +40,7 @@ export const Elements = createGlobalStyle`
   }
 
   img {
+    display: block;
     width: 100%;
   }
 `

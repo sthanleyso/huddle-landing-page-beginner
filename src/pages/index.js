@@ -33,11 +33,7 @@ const Home = () => {
   return (
     <Layout>
       <HeroSection>
-        <h1>
-          Build The Community
-          <br />
-          Your Fans Will Love
-        </h1>
+        <h1>Build The Community Your Fans Will Love</h1>
         <p>
           Huddle re-imagines the way we build communities. You have a voice, but
           so does your audience. Create connections with your users as you
@@ -103,12 +99,24 @@ const Home = () => {
           </div>
         </ContactBox>
         <Menu>
-          <li><a href="#!">About Us</a></li>
-          <li><a href="#!">What We Do</a></li>
-          <li><a href="#!">FAQ</a></li>
-          <li><a href="#!">Career</a></li>
-          <li><a href="#!">Blog</a></li>
-          <li><a href="#!">Contact Us</a></li>
+          <li>
+            <a href="#!">About Us</a>
+          </li>
+          <li>
+            <a href="#!">What We Do</a>
+          </li>
+          <li>
+            <a href="#!">FAQ</a>
+          </li>
+          <li>
+            <a href="#!">Career</a>
+          </li>
+          <li>
+            <a href="#!">Blog</a>
+          </li>
+          <li>
+            <a href="#!">Contact Us</a>
+          </li>
         </Menu>
         <SocialMedia>
           <li>
