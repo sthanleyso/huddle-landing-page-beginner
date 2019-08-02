@@ -112,9 +112,9 @@ export const HeroSection = styled.section`
     }
   }
 
-  @media (min-width: 480px) {
+  @media (min-width: 480px) and (max-width: 700px) {
     img {
-      max-width: 80%;
+      max-width: 70%;
     }
   }
 
@@ -160,7 +160,7 @@ export const HeroSection = styled.section`
     }
   }
 
-  @media(min-width: 980px) {
+  @media (min-width: 980px) {
     h1 {
       align-self: end;
       font-size: 2rem;
@@ -201,7 +201,6 @@ export const Card = styled.article`
   line-height: 1.4;
 
   img {
-    /* max-width: 360px; */
     margin-bottom: 42px;
   }
 
@@ -226,13 +225,13 @@ export const Card = styled.article`
     }
   }
 
-  @media (min-width: 480px) {
+  @media (min-width: 480px) and (max-width: 700px) {
     img {
-      max-width: 80%;
+      max-width: 60%;
     }
   }
 
-  @media(min-width: 700px) {
+  @media (min-width: 700px) {
     display: grid;
     grid-template-areas:
       "title pic"
@@ -260,7 +259,7 @@ export const Card = styled.article`
     }
   }
 
-  @media(min-width: 980px) {
+  @media (min-width: 980px) {
     grid-column-gap: 80px;
     padding: 42px 32px 42px 56px;
 
@@ -275,7 +274,7 @@ export const Card = styled.article`
 `
 
 export const CardReverse = styled(Card)`
-  @media(min-width: 700px) {
+  @media (min-width: 700px) {
     grid-template-areas:
       "pic title"
       "pic desc";
@@ -304,6 +303,7 @@ export const Box = styled.article`
   h2 {
     font-size: 1rem;
     margin-bottom: 24px;
+    color: hsl(192, 100%, 9%);
   }
 
   a {
@@ -336,6 +336,21 @@ export const Box = styled.article`
       border-radius: 24px;
     }
   }
+
+  @media (min-width: 700px) {
+    max-width: 550px;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    a {
+      width: 280px;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      border-radius: 32px;
+    }
+  }
 `
 
 export const ContactSection = styled(CardSection)`
@@ -359,6 +374,39 @@ export const ContactSection = styled(CardSection)`
 
   a {
     color: #ffffff;
+  }
+
+  @media (min-width: 700px) {
+    display: grid;
+    grid-template-areas:
+      "logo logo logo"
+      "contacts menu social"
+      "contacts menu copyright";
+    grid-auto-columns: minmax(200px, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    padding: 120px 32px 50px 42px;
+
+    > img {
+      grid-area: logo;
+      width: 166px;
+      margin-bottom: 0;
+    }
+
+    > p {
+      grid-area: copyright;
+      align-self: end;
+    }
+  }
+
+  @media(min-width: 980px) {
+    grid-column-gap: 80px;
+    padding: 120px 64px 50px 64px;
+  }
+
+  @media(min-width: 1280px) {
+    grid-column-gap: 120px;
+    padding: 120px 64px 50px 120px;
   }
 `
 
@@ -388,6 +436,20 @@ export const ContactBox = styled.article`
   div:last-child > img {
     margin-top: 4px;
   }
+
+  @media (min-width: 700px) {
+    grid-area: contacts;
+
+    div {
+      img {
+        width: 14px;
+      }
+
+      p {
+        font-size: 0.75rem;
+      }
+    }
+  }
 `
 
 export const Menu = styled.nav`
@@ -400,6 +462,13 @@ export const Menu = styled.nav`
       font-size: 1rem;
     }
   }
+
+  @media (min-width: 700px) {
+    grid-area: menu;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 `
 
 export const SocialMedia = styled.ul`
@@ -409,18 +478,42 @@ export const SocialMedia = styled.ul`
   width: 100%;
   margin-bottom: 40px;
 
-  li:nth-child(1) {
-    padding: 10px 13px;
-  }
-
-  li:nth-child(3) {
-    padding: 10px 11px;
-  }
-
   li {
     margin: 0 10px;
-    padding: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 50%;
+
+    a {
+      padding: 10px 14px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+    }
+
+    &:nth-child(1) > a {
+      padding: 10px 17px;
+    }
+
+    &:nth-child(3) > a {
+      padding: 10px 15px;
+    }
+  }
+
+  @media (min-width: 700px) {
+    grid-area: social;
+    justify-content: flex-start;
+
+    li {
+    margin: 0 4px;
+
+    a {
+      padding: 2px 6px;
+    }
+
+    &:nth-child(1) > a {
+      padding: 2px 9px;
+    }
+
+    &:nth-child(3) > a {
+      padding: 2px 7px;
+    }
+  }
   }
 `

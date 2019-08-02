@@ -79,14 +79,13 @@ const Home = () => {
         </Box>
       </CardSection>
       <ContactSection>
+        <img src={logo} alt="Huddle brand" />
         <ContactBox>
-          <img src={logo} alt="Huddle brand" />
           <div>
             <img src={location} alt="Location icon" />
             <p>
               Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz
-              malandris se pirulitá. Tá deprimidis, eu conheço uma cachacis que
-              pode alegrar sua vidis.
+              malandris se pirulitá.
             </p>
           </div>
           <div>
@@ -120,17 +119,29 @@ const Home = () => {
         </Menu>
         <SocialMedia>
           <li>
-            <a href="#!">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
           </li>
           <li>
-            <a href="#!">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faTwitter} />
             </a>
           </li>
           <li>
-            <a href="#!">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
